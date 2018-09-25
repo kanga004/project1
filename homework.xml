@@ -1,0 +1,34 @@
+<old navy>
+	<womens>
+		<womens 1>
+		 	<main floor>
+		 	<fitting rooms>
+	 			<room 1>
+	 			<room 2 >
+	 				<storage>
+	 			</room 2>
+	 		</fitting rooms>
+		 	<cashier>
+		 </womens 1>
+		 <womens 2>
+		 	<main floor>
+		 	<clearance>
+		 </womens 2>
+	</womens>
+
+	<mens>
+		<main floor>
+		<clearance>
+		<fitting rooms>
+	 		<room 1>
+	 		<room 2>
+	 			<storage>
+	 		</room 2>
+	 	</fitting rooms>
+	 </mens>	
+	<kids>
+		<main floor>
+		<clearance>
+	</kids>
+	<Office>
+</old navy>
