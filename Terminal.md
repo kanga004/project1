@@ -22,7 +22,7 @@
 to upload to github
 
 - git commit -am "some message"
-- hit push origin master
+- git push origin master
 
 
 
