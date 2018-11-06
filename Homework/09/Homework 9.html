@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+<style>
+  .container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+  .top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+  } 
+  
+  html,body{
+    margin:0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  img{
+    width: 50vmax;
+    height: 30vmax;
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+</style>
+</head>
+<body>
+   <div class="container">
+  <img src="channels.gif" id="gifs">
+    <div class="top-right"> <h1 id = "number"> </h1></div>
+
+</div>
+ 
+
+<script> 
+ 
+
+  var myGifs = document.getElementById("gifs");
+  var channels = ["smart.gif", "tina.gif", "dance.gif"];
+  var x = 1;
+
+  function change(){
+  document.getElementById("gifs").src = channels[x];
+  x ++; 
+    if(x >= 3){
+      x = 0
+    }
+    document.getElementById("number").innerHTML = x ;
+
+    if(x < 0){
+      x = 3}
+  }
+
+  function checkKey(){
+  //    document.getElementById("gifs").src = channels[x];
+ // x --; 
+  //  if(x <= 0){
+  //    x = 3
+  //  }
+  //  document.getElementById("number").innerHTML = x ;
+//
+   // if(x < 0){
+  //    x = 3}
+ }
+
+  document.onkeyup = checkKey;
+  document.onkeyup = change;
+  
+
+
+</script>
+
+</body>
+</html>
