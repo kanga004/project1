@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style>
+html, body{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100%;
+}	
+h1{
+font-size: 7vmin;
+}
+</style>
+</head>
+<body>
+<input type="file" id = "open-file">
+<h1 id= "poem"></h1>
+
+
+<script>
+
+
+var reader = new FileReader ();
+
+document.getElementById ("open-file").onchange = function(){
+	reader.readAsText(this.files[0])
+}
+
+reader.onload = function(event){
+	buildDictionary(event.target.result);
+	markov();
+}
+var hi = [
+				    "CD",
+				    "CT",
+				    "RG",
+				    "FE",
+				    "FE",
+				    "BF",
+				    "BF",
+				    "BF",
+				    "BF",
+				    "VD",
+				    "FE",
+				    "UK",
+				    "YU",
+				    "HJ",
+				    "BN"]
+function randomInt(){
+	var number = Math.random() * 15;
+	var integer = parseInt(number);
+	return integer;
+}
+var initials = (hi[randomInt()]);
+
+
+var dictionary = {};
+function buildDictionary(text){
+	//console.log(text);
+
+	var words = text.split(/\s+/);
+
+	//console.log(words);
+	//loop over every word, put in the dictionary
+
+
+	var i = 0;
+	while(i < words.length-1){
+		//get the word from word array
+		var thisword = words[i];
+		var nextword = words[i+1];
+		//get the first letter from this word
+		//var firstletter = thisword[0];
+		//if we're seeing this letter for the first time, create an emty array
+		if(dictionary[thisword] == undefined){
+			dictionary[thisword] = [];
+		}
+
+		//add the word into the dictionary, at the first letter's spot, add to the array
+		dictionary[thisword].push(nextword);
+
+		i = i + 1;
+
+	}
+	//console.log(dictionary);
+}
+
+function randomInt(max) {
+	return parseInt(Math.random() * max);
+}
+
+function markov (){
+	var keys = Object.keys(dictionary);
+	var firstword = keys [randomInt(keys.length)];
+
+	var words = [firstword];
+
+	//loop start
+	var counter = 0;
+	while(counter < 50){
+		var thisword = words[words.length - 1];
+		var nextwordarray = dictionary[thisword];
+		var nextword = nextwordarray[randomInt(
+			nextwordarray.length)];
+		words.push(nextword);
+		counter = counter + 1;
+	}
+	console.log(words); 
+	
+var poetry = initials + words;
+document.getElementById("poem").innerHTML = poetry;
+}
+
+</script>
+
+</body>
+</html>

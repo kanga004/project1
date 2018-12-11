@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style>
+html, body{
+	height: 100%;
+	margin: 0%;
+}
+	
+@keyframes shift{
+	50%{
+		transform: translate(-120px);
+	}
+	70%{
+		transform: skew(20deg, 10deg);
+	}
+	100%{
+		transform: initial;
+	}
+}
+@keyframes shift2{
+	30%{
+		transform: translate(-120px);
+	}
+	70%{
+		transform: skew(20deg, 10deg);
+	}
+	100%{
+		transform: initial;
+	}
+}
+@keyframes shift3{
+	10%{
+		transform: translate(-120px);
+	}
+	70%{
+		transform: skew(20deg, 10deg);
+	}
+}
+@keyframes rotate{
+	10%{
+		transform: rotate(20deg);
+	}
+}
+	@keyframes scale{
+	10%{
+		transform: scale(.8, .8);
+	}
+}
+	#blue1{
+		animation: shift 2s infinite;
+		background-color: #57a4d4; 
+		width: 180px;
+		height: 80px;
+		position: absolute;
+    	left: 50px;
+    	top: 80px;
+    	opacity: 0.8;
+		
+	}
+	#blue2{
+		animation: shift2 2s infinite;
+		background-color: #57a4d4; 
+		width: 180px;
+		height: 80px;
+		position: absolute;
+    	left: 50px;
+    	top: 210px;
+    	opacity: 0.8;
+		
+	}
+	#blue3{
+		animation: shift3 2s infinite;
+		background-color: #57a4d4; 
+		width: 180px;
+		height: 80px;
+		position: absolute;
+    	left: 50px;
+    	top: 340px;
+    	opacity: 0.8;
+		
+	}
+	#red{
+		animation: rotate 2s infinite;
+		background-color: #cf4949; 
+		width: 140px;
+		height: 420px;
+		position: absolute;
+    	left: 150px;
+    	top: 40px;
+		
+	}
+	#green{
+
+		animation: scale 2s infinite;
+		background-color: #d9dd75; 
+		width: 330px;
+		height: 500px;
+		position: absolute;
+    	left: 150px;
+    	top: 50px;
+	}
+</style>
+
+</head>
+<body>
+	
+	<div id="green">
+		<div id="red"></div>
+		<div id="blue1"></div>
+
+		<div id="blue2"></div>
+		<div id="blue3"></div>
+	</div>
+	
+
+</body>
+</html>

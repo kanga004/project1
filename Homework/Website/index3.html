@@ -1,0 +1,118 @@
+<html>
+
+	<head>
+		<title>Classwork</title>
+	</head>
+
+	<style>
+	body{
+
+		text-align: center;
+		background-color: white;
+		color: black;
+		font-family: Univers-Black;
+		margin: 20vmin 20vmin 20vmin 20vmin;
+		cursor: url(red.cur), default;
+	/* Change the hotspot - cursor: url(crosshair.cur) 0 0, default; */
+	
+	}
+
+	img {
+		padding: 100px 5px 5px 5px; /* Some padding */
+
+
+		opacity: 0.3;
+		width: 70vmin;
+		cursor: url(blue.cur), default;
+	}
+
+	h3, a{
+		text-align: center;
+		background-color: white;
+		color: black;
+		font-family: Univers-Black;
+		margin: 0vmin
+	}
+
+	p{
+		text-align: center;
+		color: black;
+		font-family: Univers-Black;
+		padding: 20px 0px 0px 0px;
+	}
+
+
+	@keyframes rotate{
+	50%{transform: scale(1.1, 1.1);
+	}
+	100%{transform: initial;
+	}
+	}
+
+	img:hover {
+ 	opacity: 1.0;
+ 	animation: rotate 3s infinite;
+	}
+
+	a:hover {
+ 	color: yellow;
+ 	cursor: url(pink.cur), default;
+ 	}
+
+	.column {
+  	float: left;
+  	width: 100%;
+  	padding: 5vmin 0 5vmin 0;
+	}
+
+	.custom-cur {
+  cursor: auto;
+  cursor: url(mouse.svg) 4 12, auto;
+
+
+}
+
+
+	</style>
+
+	<body>
+		<h1>Classwork</h1>
+		 
+
+
+		<h2> 
+		<a href="index.html">Home</a> </h2>
+		 
+		 <div class="custom-cur">
+
+  			</div>
+
+		<div class="row">
+ 			<div class="column">
+    			<a href="classwork/1.html"><img src="images/type.png" width= "300" class= "hover"/></a>
+    			<p class="text">Bad Typewriter</p>
+  			</div>
+  			<div class="column">
+    			<a href="classwork/5.html"><img src="images/rainbow.png" width= "300"class="hover"/></a>
+    			<p class="text">Rainbow</p>
+  			</div>
+  			<div class="column">
+    			<a href="classwork/3.html"><img src="images/map.png" width= "300"class="hover"/></a>
+    			<p class="text">Homes Map</p>
+  			</div>
+		
+ 			<div class="column">
+    			<a href="classwork/4.html"><img src="images/pong.png" width= "300"class="hover"/></a>
+    			<p class="text">Pong</p>
+  			</div>
+  			<div class="column">
+    			<a href="classwork/6.html"><img src="images/solar.png" width= "300"class="hover"/></a>
+    			<p class="text">Solar System</p>
+  			</div>
+
+		</div>
+
+
+	</body>
+
+</html>
